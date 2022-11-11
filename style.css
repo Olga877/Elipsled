@@ -1,0 +1,345 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+a {color: #616161;}
+p {
+	color:#616161;}
+p b {
+	color: #000000;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;}
+/*--------------------*/
+
+body {
+    width: 100vw;
+	margin: 0 auto;
+    padding: 20px 10%;
+    background-color: #fff;
+    background: url(dimonds.png) repeat, 
+                url(Lamps.png) no-repeat 93% 36%;
+    background-size: cover, 52%;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10%;
+}
+.header__navigation {
+    min-width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+a.header__links {
+    font-weight: 500;
+}
+a.phone {
+    font-weight: 700;
+    color:#000;
+}    
+.container {
+    display: flex;
+    margin-top: 50px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 52%;
+}
+.form h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    text-align: left;
+    padding-bottom: 30px;
+}
+.form p {
+    width: 41%;
+    line-height: 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+}
+.form p span {
+    color: #FB973B;
+}
+.form__submit {
+    line-height: 2rem;
+    width: 60%;
+    display: flex;
+    height: 60px;
+    background-color: #F8F8F8;
+}
+.form__submit button {
+    width: 50%;
+    background-color: #FB973B;
+}
+.form__submit input {
+    border: 1px solid #e1e1e1;
+    text-align: center;
+}
+.about {
+    width: 63%;
+    margin-top: 132px;
+    margin-left: 15%;
+    padding-bottom: 300px;
+}
+.about__heading {
+    display: flex;
+    flex-direction: column;
+}
+.about__heading h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    padding-bottom: 30px;
+}
+.about__heading p {
+    line-height: 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+    width:  53%;
+    text-align: center;
+    align-self: center;
+}
+.about__heading p span {
+    color: #FB973B;
+}
+.about__container {
+    height: 451px;
+    display: flex;
+    justify-content: space-between;
+}
+.about__paragraphs {
+    height: 448px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-align: center;
+}
+/*Mobile menu*/
+.mobile-menu {
+    width: 50%;
+    position: relative;
+    text-align: right;
+    height: 40px;
+}
+#chk-box {
+    display: none;
+}
+.mobile-menu nav {
+	width: 100%;
+}
+.label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+}
+.line {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: #000;
+    transition: .5s all;
+    border-radius: 1px;
+}
+.line_two, .line_three {
+	top: 18px;
+}
+.line_four {
+	top: 28px;
+}
+.main-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    transition: 1s all;
+}
+.main-menu a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.main-menu a:hover {
+    background-color: rgba(200, 200, 200, .6);
+    color: #000;
+    text-transform: uppercase;
+}
+#chk-box:checked ~ .main-menu{
+    min-height: 300px;
+    font-size: 1.5rem;
+}
+#chk-box:checked ~ .line_one, #chk-box:checked ~ .line_four {
+    display: none;
+}
+#chk-box:checked ~ .line_two {
+    transform: rotate(45deg);
+}
+#chk-box:checked ~ .line_three {
+    transform: rotate(-45deg);
+}
+
+/* media */
+/* Large desktops and laptops */
+@media screen and (max-width: 1520px) {
+    .about__heading h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1330px) {
+    .about__heading h1 {
+        font-size: 2.7rem;
+    }
+    .about__lamp img {
+        height: 380px;
+    }
+    .form h1 {
+        font-size: 2.8rem;
+    }
+}
+@media screen and (max-width: 1282px) {
+    .about__heading h1 {
+        font-size: 2.4rem;
+    }
+    .about__lamp img {
+        height: 350px;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+/* Landscape tablets and medium desktops */
+@media screen and (max-width: 1200px) {
+    .header__links {
+        display: none;
+    }
+    .header {
+        padding-right: 0;
+    }
+    .header__navigation {
+        min-width: 10%;
+        justify-content:flex-end;
+    }
+    .header__navigation .phone {
+        font-size: 1.8rem;
+    }
+    .form h1 {
+        font-size: 2.5rem;
+    }
+    .about__heading h1 {
+        font-size: 2rem;
+    }
+    .about__lamp img {
+        display: none;
+    }
+    .about__paragraphs {
+        width: 100%;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__heading {
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* Portrait tablets, Landscape phones and small desktops */
+
+@media screen and (max-width: 991px) {
+    .about__heading h1 {
+        font-size: 1.5rem;
+    }
+    .form {
+        width: 100%;
+    }
+    .form h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 600;
+        line-height: 3rem;
+    }
+    .header__navigation .phone {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 713px) {
+    .form p {
+        width: 90%;
+    }
+    .header__navigation .phone {
+        display: none;
+    }
+    .about__heading h1 {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+    .about__heading {
+        width: 90%;
+    }
+    .about__heading p {
+        width: 100%;
+    }
+}
